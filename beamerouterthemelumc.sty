@@ -1,0 +1,45 @@
+\mode<presentation>
+% Frame title
+\defbeamertemplate*{frametitle}{lumc}[1][]
+{
+
+%\vskip0.2cm%
+\begin{beamercolorbox}[wd=\paperwidth,ht=0.5cm,leftskip = 1.4cm]{navigation symbols} 
+\usebeamerfont{navigation symbols}
+\ifnum\value{page}>2
+{\insertsectionnavigationhorizontal{.5\textwidth}{\hskip0pt plus1filll}{}}
+\fi
+\end{beamercolorbox}
+\vskip0.2cm%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle} 
+  \begin{tikzpicture}
+  \useasboundingbox(0,0) rectangle(\the\paperwidth,1.2);
+  %\fill[orange] (0,0) rectangle(2.95,1.2);
+  %\fill[blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.2);
+   \ifx\insertframesubtitle\@empty%
+      {\node[anchor=west, font=\large] at (1.5,0.61){\usebeamerfont{frametitle}{\insertframetitle}};}
+      \else%
+      {\node[anchor= west, font=\large] at (1.5,0.81){\usebeamerfont{framesubtitle}{\insertframetitle}};%
+       \node[anchor= west, font=\small] at (1.5,0.41){\usebeamerfont{framesubtitle}{\insertframesubtitle}};}%
+      \fi
+  \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+\defbeamertemplate{itemize item}{lumc}    {\scriptsize\raise1.25pt\hbox{\donotcoloroutermaths$\blacktriangleleft$}}
+
+% \defbeamertemplate{last page}{lumc} {
+% \ifnum\value{page}=\insertdocumentendpage
+
+%  \begin{beamercolorbox}[wd=\paperwidth,ht=\paperheight]{subtitle} 
+%   \begin{tikzpicture}
+%   \useasboundingbox(0,0) rectangle(\the\paperwidth,\the\paperheight);
+%   {\node[anchor=west, font=\Huge] at (3,3){\usebeamerfont{subtitle}{Thank you!}};}    
+%   \end{tikzpicture}
+%   \end{beamercolorbox}
+
+% \fi
+% }
+
+
+\mode<all>

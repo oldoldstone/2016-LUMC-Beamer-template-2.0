@@ -1,0 +1,54 @@
+\mode<presentation>
+\newcommand\customfont[1]{{\usefont{T1}{font}{m}{n} #1 }}
+\usepackage{fontspec}
+ \setmainfont[%NormalFont = Calibri.ttf,
+ BoldFont = Calibrib.ttf,
+ ItalicFont = Calibrii.ttf,
+ BoldItalicFont = Calibriz.ttf]{Calibri}
+ \setsansfont[Font = Calibri.ttf,
+ BoldFont = Calibrib.ttf,
+ ItalicFont = Calibrii.ttf,
+ BoldItalicFont = Calibriz.ttf]{Calibri.ttf}
+\usepackage[math-style=ISO]{unicode-math}
+\setbeamerfont{header}{family=\ttfamily}
+\setbeamerfont{title}{parent=header,size={\fontsize{24}{24}}, series = \bf}
+\setbeamerfont{subtitle}{parent=header, size={\fontsize{20}{20}},series = \bf}
+\setbeamerfont{author}{parent=header, size={\fontsize{20}{20}},series = \normalfont}
+\setbeamerfont{place}{parent=header, size={\fontsize{14}{14}},series = \normalfont}
+\setbeamerfont{date}{parent=header, size=\normalsize}
+\setbeamerfont{institute in title}{parent=header, size=\small,series = \normalfont}
+
+\setbeamerfont{endtext}{parent=header,size=\huge,series = \normalfont}
+\setbeamerfont{endauthor}{parent=header,size=\large,series = \normalfont}
+\setbeamerfont{endlink}{parent=header,size=\Large,series = \normalfont}
+
+%%Outline font
+\setbeamerfont{section in toc}{parent=header,size={\fontsize{20}{20}},series=\bf}
+\setbeamerfont{subsection in toc}{parent=header,size={\fontsize{18}{18}},series = \it}
+
+%navigation symbols
+\setbeamerfont{navigation symbols}{parent=header, size={\fontsize{14}{14}},series = \bf}
+
+%% This part is unclear yet 
+\setbeamerfont{header author}{parent=header,size={\fontsize{24}{24}},series = \normalfont}
+\setbeamerfont{header date}{parent=header,size={\fontsize{24}{24}},series = \normalfont}
+\setbeamerfont{header number}{parent=header,size={\fontsize{24}{24}},series = \normalfont}
+\setbeamerfont{header title}{parent=header,size={\fontsize{24}{24}},series = \normalfont}
+
+% Frame font
+\setbeamerfont{frametitle}{parent=header,size={\fontsize{24}{24}}, series = \bf}
+\setbeamerfont{framesubtitle}{parent=header,size={\fontsize{20}{20}},series = \normalfont}
+
+% block font
+\setbeamerfont{block title}{parent=header,size={\fontsize{20}{20}},series = \bf}
+\setbeamerfont{block body}{parent=header,size={\fontsize{24}{24}},series = \bf}
+
+% itermize font
+\setbeamerfont{itemize/enumerate body}{parent=header,size={\fontsize{18}{18}},series = \normalfont}
+\setbeamerfont{itemize/enumerate subbody}{parent=header,size={\fontsize{18}{18}},series = \normalfont}
+
+\setbeamerfont{footer}{parent=header,size={\fontsize{12}{12}},series = \bf}
+
+
+\mode
+<all>

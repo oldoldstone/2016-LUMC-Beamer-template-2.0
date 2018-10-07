@@ -1,0 +1,60 @@
+\mode<presentation>
+
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \ifnum\value{page}=1
+ \includegraphics[width=\paperwidth,height=\paperheight]{header}  
+   \else \relax
+   \ifnum\value{page}<\insertdocumentendpage%
+ \includegraphics[width=\paperwidth,height=\paperheight]{middle}
+  \else \relax
+ \includegraphics[width=\paperwidth,height=\paperheight]{enderq}
+ \fi
+ \fi
+  \end{tikzpicture}
+}
+\setbeamertemplate{footline}[text line]{%
+\begin{beamercolorbox}[wd = \paperwidth, leftskip=0.06\paperwidth]{footer}
+\ifnum\value{page}=1
+\else \relax
+\ifnum\value{page}<\insertdocumentendpage%
+\parbox{\linewidth}{\usebeamerfont{footer}\vspace*{-16pt}\insertpagenumber\hfill\insertauthor~|~\insertinstitute\hfill\insertdate}
+\setbeamertemplate{navigation symbols}{}
+\else \relax
+\fi
+\fi
+\end{beamercolorbox}
+}
+% Title page
+\defbeamertemplate*{title page}{lumc}[1][]
+{  
+    \vskip3.2cm%
+    %Title
+    \begin{beamercolorbox}[wd = \paperwidth, leftskip=0.15\paperwidth]{title page header}
+    \usebeamerfont{title}{\inserttitle}%
+    \end{beamercolorbox}%
+    \vskip1cm
+    \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.15\paperwidth]{subtitle}
+    \usebeamerfont{subtitle}\insertsubtitle%   
+    \end{beamercolorbox}
+       
+    \vskip5.5cm%
+    \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.15\paperwidth]{author}
+   \usebeamerfont{author}\insertauthor%
+    \vfill
+    \usebeamerfont{author}\insertinstitute%
+    \vfill
+    \end{beamercolorbox}
+    %\vskip0cm%
+    % \begin{beamercolorbox}[wd=0.4\paperwidth,right, rightskip=0cm]{date}
+    %\usebeamerfont{author}\insertdate%
+    %\end{beamercolorbox}
+  \vfill
+}
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+%\setbeamertemplate{subsections in toc}[square]
+\mode
+<all>
